@@ -1,97 +1,53 @@
 import './App.css'
-import ilustracion from './assets/img/ilustracion.svg'
-import uno from './assets/img/uno.jpg'
-import dos from './assets/img/dos.jpg'
-import tres from './assets/img/tres.jpg'
-import cuatro from './assets/img/cuatro.jpg'
-import cinco from './assets/img/cinco.jpg'
-import seis from './assets/img/seis.jpg'
 import HeaderHero from './components/HeaderHero'
 import LearnMore from './components/LearnMore'
+import Info from './components/Info'
+import CardsContainer from './components/CardsContainer'
+import Galeria from './components/Galeria'
+import LastSection from './components/LastSection'
+import Footer from './components/Footer'
 
 
 function App() {
 
   return (
     <div className='App'>
-      <HeaderHero title='Hola desde JSX' desc='Acabamos de aprender como pasar HTML a JSX y hacerlo dinamico con props' button='Escribeme'/>
-      <LearnMore title='React es cool' desc='Puedo hacer componentes muy facilmente' cta='¡Aprende ahora!'/>
-      <LearnMore title='Vite es lo maximo' desc='Duplico componentes' cta='¡Bien facil!'/>
-
-      <section className="info">
-          <div className="contenedor">
-              <h2 className="titulo left">Juntos podemos apoyar</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-      </section>
-
-      <section className="cards contenedor">
-          <h2 className="titulo">Our services</h2>
-          <div className="content-cards">
-              <article className="card">
-                  <i className="far fa-clone"></i>
-                  <h3>Title Card</h3>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                  <a href="" className="cta">Learn more</a>
-              </article>
-              <article className="card">
-                  <i className="fas fa-database"></i>
-                  <h3>Title Card</h3>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                  <a href="" className="cta">Learn more</a>
-              </article>
-              <article className="card">
-                  <i className="far fa-object-group"></i>
-                  <h3>Title Card</h3>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                  <a href="" className="cta">Learn more</a>
-              </article>
-          </div>
-      </section>
-
-      <section className="galeria">
-          <div className="contenedor">
-              <h2 className="titulo">Our work</h2>
-              <article className="galeria-cont">
-                  <img src={uno} alt="" />
-                  <img src={dos} alt="" />
-                  <img src={tres} alt="" />
-                  <img src={cuatro} alt="" />
-                  <img src={cinco} alt="" />
-                  <img src={seis} alt="" />
-              </article>
-          </div>
-      </section>
-
-      <section className="info-last">
-
-          <div className="contenedor last-section">
-              <div className="contenedor-textos-main">
-                  <h2 className="titulo left">Title of section</h2>
-                  <p className="parrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum reprehenderit nostrum expedita quasi odio architecto laudantium sunt nemo dicta atque?</p>
-                  <a href="" className="cta">Learn more</a>
-              </div>
-              <img src={ilustracion} alt="" />
-          </div>
-          
-          <div className="svg-wave" style={{height: '150px', overflow: 'hidden'}}><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-              style={{height: '100%', width: '100%'}}>
-              <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                  style={{stroke: 'none', fill: '#f5576c'}}></path>
-          </svg></div>
-      </section>
-
-      <footer id="contacto">
-          <div className="contenedor">
-              <h2 className="titulo">Contact us</h2>
-              <form action="" className="form">
-                  <input className="input"  type="text" name="" id="" placeholder="Nombre" />
-                  <input className="input"  type="email" name="" id="" placeholder="Email" />
-                  <textarea  className="input" name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                  <input className="input"  type="submit" value="Enviar" />
-              </form>
-          </div>
-      </footer>
+      <HeaderHero
+        title='Hola desde JSX' 
+        desc='Acabamos de aprender como pasar HTML a JSX y hacerlo dinamico con props' 
+        button='Escribeme'
+       />
+      <LearnMore 
+        title='React es cool' 
+        desc='Puedo hacer componentes muy facilmente' 
+        cta='¡Aprende ahora!'
+      />
+      <LearnMore 
+        title='Vite es lo maximo' 
+        desc='Duplico componentes' 
+        cta='¡Bien facil!'
+      />
+      <Info 
+        title='Componente informativo' 
+        desc='Este nuevo componente contiene la informacion que debe de ir en la pagina' 
+      />
+      <CardsContainer
+        main_title='Este componente contiene la propuesta de la pagina o empresa' 
+        title_1='Esta es la primera carta' title_2='Esta es la segunda carta' title_3='Esta es la tercera carta'
+        desc_1='Esta es la descripcion 1' desc_2='Esta es la descripcion 2' desc_3='Esta es la descripcion 3'
+        cta_1='¡Aprende mas!' cta_2='¡Aprende mas!' cta_3='Aprende mas'
+      />
+      <Galeria 
+        title='Este componente muestra la galeria de imagenes de la pagina'
+      />
+      <LastSection 
+        title='Ultima funcion'
+        desc='Este componente contiene la ultima parte de la pagina sin ser el footer'
+        cta='Contactanos'
+      />
+      <Footer 
+        title='Contactanos lo antes posible'
+      />
     </div>
   )
 }
